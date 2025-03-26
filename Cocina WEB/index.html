@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cocina</title>
+</head>
+<body>
+
+    <nav id="menu">
+
+        <img class="logo" src="img/Logo.png" alt="cuakcuak">
+
+        <ul>
+            <a href="#banner"><li> Inicio </li></a>
+            <a href="#sc2"><li> Instructores </li></a>
+            <a href="#"><li> Perfil Ocupacional </li></a>
+            <a href=""><li> Áreas de Trabajo </li></a>
+            <a href=""><li> Proyectos </li></a>
+        </ul>
+
+    </nav>
+
+
+    <header id="banner">
+
+        <div class="fondo"></div>
+
+        <div class="texto">
+            <h1>Cocina <br> <b class="sub">Sabor, pasión y técnica</b> </h1>
+            <p>Descubre el arte de los sabores y transforma tu pasión en <br> profesión. ¡Estudia Técnico en Cocina en el SENA y abre las <br> puertas a un futuro lleno de oportunidades culinarias!</p>
+            <a href="#sc2"><img class="img-banner" src="img/Vermas2.png"></a>
+        </div>   
+    
+    </header>
+
+
+    <section id="sc1">
+
+        <div class="barra"></div>
+
+        <div class="titulo">
+            <h4>Entrevista</h4>
+            <h1>INSTRUCTOR</h1>
+        </div>
+
+        <div>
+            <video class="entrevista" src="video/entrevista.mp4" controls poster="img/HORIZONS logo.jpg" autoplay loop muted></video>
+        </div>
+
+        <div class="texto2">
+            <p>Cocina en el Servicio Nacional de Aprendizaje (SENA). Es un técnico, que prepara a los estudiantes en la elaboración de platos nacionales e internacionales, aplicando técnicas culinarias, normas de higiene y buenas prácticas en la manipulación de alimentos. Durante el curso, los aprendices adquieren habilidades en cocina caliente y fría, repostería, panadería y presentación de platos.</p>
+        </div>
+
+    </section>
+
+
+    <section id="sc2">
+
+        <div class="titulo2">
+            <h4>Instructores de la</h4>
+            <h1>RED</h1>
+        </div>
+
+        <div class="seccion">
+            <div class="carta">
+                <h5> Duración: <b class="subti"> 24 Meses. </b> </h5>
+                <h5> Nivel Estudio: <b class="subti"> Bachiller y Pruebas Saber 11. </b> </h5>
+                <h5> Modalidad: <b class="subti"> Presencial y a Distancia. </b> </h5>
+                <h5> Edad: <b class="subti"> 16 Años. </b> </h5>
+            </div>
+
+
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="img/fondo1.jpg" alt="background">
+                        <div class="content">
+                            <div class="profile">
+                                <img src="img/Instructor.png" alt="profile">
+                            </div>
+                            <div class="name">Camilo Guevara</div>
+                            <div class="role">Gastrónomo</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/fondo2.jpg" alt="background">
+                        <div class="content">
+                            <div class="profile">
+                                <img src="img/Instructor2.jpg" alt="profile">
+                            </div>
+                            <div class="name">Alejandro Villa</div>
+                            <div class="role">Repostero</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+            
+            <script>
+                const slider = document.querySelector('.slider');
+                const slides = document.querySelectorAll('.slide');
+                const prev = document.querySelector('.prev');
+                const next = document.querySelector('.next');
+                let index = 0;
+                
+                next.addEventListener('click', () => {
+                    index = (index + 1) % slides.length;
+                    updateSlider();
+                });
+                
+                prev.addEventListener('click', () => {
+                    index = (index - 1 + slides.length) % slides.length;
+                    updateSlider();
+                });
+                
+                function updateSlider() {
+                    slider.style.transform = `translateX(${-100 * index}%)`;
+                }
+            </script>
+        </div>
+
+    </section>
+
+
+    <section id="sc3">
+
+        <div class="titulo3">
+            <h4>Perfil</h4>
+            <h1>Ocupacional</h1>
+        </div>
+
+
+    </section>
+
+    
+</body>
+</html>
