@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mesa y Bar</title>
+</head>
+<body>
+
+    <nav id="menu">
+
+        <img class="logo" src="img/Logo.png" alt="cuakcuak">
+
+        <ul>
+            <a href="#banner"><li> Inicio </li></a>
+            <a href="#sc2"><li> Instructores </li></a>
+            <a href="#"><li> Perfil Ocupacional </li></a>
+            <a href=""><li> Áreas de Trabajo </li></a>
+            <a href=""><li> Proyectos </li></a>
+        </ul>
+
+    </nav>
+
+
+    <header id="banner">
+
+        <div class="fondo"></div>
+
+        <div class="texto">
+            <h1>Servicio <br> <b class="sub">Restaurante y Bar</b> </h1>
+            <p>Brindar experiencias inolvidables no solo satisface el paladar, <br> sino también el alma. ¡Estudia Servicio de Restaurante y Bar en <br> el SENA y abre las puertas a un futuro lleno de oportunidades!</p>
+            <a href="#sc2"><img class="img-banner" src="img/Vermas2.png"></a>
+        </div>   
+    
+    </header>
+
+
+    <section id="sc1">
+
+        <div class="barra"></div>
+
+        <div class="titulo">
+            <h4>Entrevista</h4>
+            <h1>INSTRUCTOR</h1>
+        </div>
+
+        <div>
+            <video class="entrevista" src="video/entrevista.mp4" controls poster="img/HORIZONS logo.jpg" autoplay loop muted></video>
+        </div>
+
+        <div class="texto2">
+            <p>Servicio de Restaurante y Bar en el Servicio Nacional de Aprendizaje (SENA). Es un técnico, que forma profesionales en la atención y servicio al cliente en establecimientos gastronómicos. Los aprendices adquieren habilidades en protocolo, montaje de mesas, maridaje, preparación de bebidas, coctelería y técnicas de servicio. Además, se capacitan en normas de higiene, seguridad alimentaria y manejo de insumos.</p>
+        </div>
+
+    </section>
+
+
+    <section id="sc2">
+
+        <div class="titulo2">
+            <h4>Instructores de la</h4>
+            <h1>RED</h1>
+        </div>
+
+        <div class="seccion">
+            <div class="carta">
+                <h5> Duración: <b class="subti"> 12 Meses. </b> </h5>
+                <h5> Nivel Estudio: <b class="subti"> Bachiller y Pruebas Saber 11. </b> </h5>
+                <h5> Modalidad: <b class="subti"> Presencial y a Distancia. </b> </h5>
+                <h5> Edad: <b class="subti"> 17 Años. </b> </h5>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="img/fondo1.jpg" alt="background">
+                        <div class="content">
+                            <div class="profile">
+                                <img src="img/Instructor.jpeg" alt="profile">
+                            </div>
+                            <div class="name">Freddy Daza</div>
+                            <div class="role">Servicio en alimentos, bebidas y barismo</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/fondo2.jpg" alt="background">
+                        <div class="content">
+                            <div class="profile">
+                                <img src="img/Instructor2.jpg" alt="profile">
+                            </div>
+                            <div class="name">Jhonatan Diaz</div>
+                            <div class="role">Bartender</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+            
+            <script>
+                const slider = document.querySelector('.slider');
+                const slides = document.querySelectorAll('.slide');
+                const prev = document.querySelector('.prev');
+                const next = document.querySelector('.next');
+                let index = 0;
+                
+                next.addEventListener('click', () => {
+                    index = (index + 1) % slides.length;
+                    updateSlider();
+                });
+                
+                prev.addEventListener('click', () => {
+                    index = (index - 1 + slides.length) % slides.length;
+                    updateSlider();
+                });
+                
+                function updateSlider() {
+                    slider.style.transform = `translateX(${-100 * index}%)`;
+                }
+            </script>
+        </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="sc3">
+
+        <div class="titulo3">
+            <h4>Perfil</h4>
+            <h1>Ocupacional</h1>
+        </div>
+
+
+    </section>
+
+    
+</body>
+</html>
